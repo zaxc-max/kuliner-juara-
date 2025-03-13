@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kuliner Juara SMAN 1 Grabagan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">Kuliner Juara🔥</div>
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="nav-menu">
+            <a href="#home" onclick="showLayer('home')">Beranda</a>
+            <a href="#about" onclick="showLayer('about')">Tentang</a>
+            <a href="#projects" onclick="showLayer('projects')">Menu Kami</a>
+            <a href="#contact" onclick="showLayer('contact')">Kontak</a>
+        </div>
+    </nav>
+
+    <!-- Layers -->
+    <div class="layers">
+        <!-- Home -->
+        <section id="home" class="layer active">
+            <div class="container">
+                <h1 class="title">Halo, Saya <span>Kuliner Juara dari SMAN 1 Grabagan</span></h1>
+                <p class="description">Untuk melihat menu kuliner kami, silakan klik garis tiga pojok kanan atas.</p>
+                <p class="description">Untuk pemesanan, klik "Kontak" di menu.</p>
+            </div>
+        </section>
+
+        <!-- Tentang -->
+        <section id="about" class="layer">
+            <div class="container">
+                <img src="m1.jpg" alt="Kuliner Juara" class="about-image">
+                <h2 class="section-title">Tentang Kami</h2>
+                <div class="promo-section">
+                    <p class="promo-slide">Halo kak, kami dari <strong>Kuliner Juara</strong> 🤗 ingin memperkenalkan produk kami 🥳</p>
+                    <p class="promo-slide">Bingung cari cemilan buat keluarga? Pas banget!!</p>
+                    <p class="promo-slide">Kami ada berbagai aneka <strong>kerupuk pedas</strong> 😋.</p>
+                    <p class="promo-slide">Haus? Galau?</p>
+                    <p class="promo-slide">Tenang!!!! Produk <strong>es kami</strong> bisa jadi solusi semua masalah hati (kecuali mantan ya) 😅</p>
+                    <p class="promo-slide">Ada juga nih khusus <strong>hari Jum'at</strong>, kami ada <strong>cilok ayam suwir</strong> dan topping ayamnya nggak main-main 😋</p>
+                    <p class="promo-slide">Yokkk panjangin list-nya teman-teman!!</p>
+                    <p class="promo-slide">Bisa langsung datang ke stand kami di <strong>depan Kecamatan Grabagan</strong> atau <strong>COD</strong> yaaa 🔥</p>
+                </div>
+            </div>
+        </section>
+
+<!-- Menu Kami -->
+        <section id="projects" class="layer">
+            <div class="container">
+                <h1 class="title">Menu Kami</h1>
+                <img src="m2.jpg" alt="Menu Kuliner Juara" class="menu-image">
+                <p1>"Lagi laper atau haus? Tenang! Kuliner Juara siap manjain lidahmu — dari kerupuk pedas yang nagih sampai es segar pelepas dahaga. Yuk, cobain sekarang!"
+
+</p1>
+            </div>
+        </section>
+
+        <!-- Kontak -->
+        <section id="contact" class="layer">
+            <div class="container">
+                <h1 class="title">Mau beli apa nih🤗?</h1>
+                <p class="description">Pencet tombol di bawah untuk menghubungi admin kami:</p>
+                <a href="https://wa.me/6281234151802" target="_blank" class="wa-button">Kontak 1</a>
+                <a href="https://wa.me/6282257412247" target="_blank" class="wa-button">Kontak 2</a>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2024 Kuliner Juara 🔥 | SMAN 1 Grabagan</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        function toggleMenu() {
+            document.querySelector('.nav-menu').classList.toggle('active');
+            document.querySelector('.hamburger').classList.toggle('active');
+        }
+
+        function showLayer(layerId) {
+            document.querySelectorAll('.layer').forEach(layer => {
+                layer.classList.remove('active');
+            });
+            document.getElementById(layerId).classList.add('active');
+            document.querySelector('.nav-menu').classList.remove('active');
+            document.querySelector('.hamburger').classList.remove('active');
+        }
+    </script>
+</body>
+</html>
